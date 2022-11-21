@@ -1,0 +1,270 @@
+$color_mint: #32C096;
+$color_mint_light:#ebf9f5;
+$color_brown: #2B2B2B;
+$color_black: #000000;
+$color_light_green: #84A017;
+$color_light_purple:#A768E2;
+$font: 'Fira Sans', sans-serif;
+$font_lato:'Lato', sans-serif ;
+$font-weight:700;
+$width_bloc:590.5px;
+$padding_table:42px;
+@mixin fontsh6 {
+    font-family: $font;
+    font-weight: $font-weight;    
+    font-size: 20px;
+    line-height: 24px;
+    align-items:center;
+    color:$color_brown;
+}
+@mixin fontp {
+    font-family: $font_lato;
+    font-weight: $font-weight;  
+    font-style: normal;  
+    font-size: 16px;
+    /*line-height: 30px;*/
+    align-items:center;
+    color:$color_brown;
+    letter-spacing: 0.25px;
+
+}
+@mixin hr {
+    border: 1px solid #9A9A9A;
+    width: $width_bloc;
+    opacity: 0.5;
+}
+
+@mixin bdo{
+    font-family: $font;
+    font-weight: $font-weight;    
+    font-size: 10px;
+    line-height: 16px;
+    align-items:center;
+    color:rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.4px;
+    font-style: normal;
+}
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items:flex-start;
+    padding: 20px 20px 20px 20px;
+
+}
+.information {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: $width_bloc;
+    .bloc-1{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+
+    height: 40px;
+    img {
+        padding: 0 12px 0 0;
+    }
+    h6{
+        @include fontsh6;
+        width: 160px;
+    }
+    
+    .shelter{
+
+        width: 82px;
+        height: 27px;
+        background: $color_light_purple;
+        border-radius:8px;
+        border-style:none;
+        cursor: pointer;
+
+        font-family: $font;
+        font-weight: $font-weight;
+        font-size: 12px;
+        line-height: 12px;
+        align-items:center;
+        color: #FFFFFF;
+    }
+
+    
+}
+hr{
+    @include hr;
+    margin-bottom: 0;
+}
+}
+//bloc-2 revard
+.bloc-2 {
+    height: 98px;
+    width: 590.5px;
+    background: $color_mint_light;
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+    margin-top: $padding_table;
+    margin-bottom: $padding_table - 16px;
+    .reward{
+    color:$color_mint;
+    font-family: $font;
+    font-weight: $font-weight;
+    font-size: 34px;
+    line-height: 36px;
+    padding-left:36px;
+    }
+    h4{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+p{
+    font-family: $font_lato;
+}
+
+//bloc-3 Table
+.bloc-3 {
+    padding: 0 0 0 0;
+}
+
+
+table {
+    width: 590.5px;
+    padding: 0 0 0 0;
+    /*border-spacing:16px;*/
+    border-spacing:0px 16px;
+    tr {
+        /*border-spacing:16px 0px 16px 0px;*/
+        
+        th{
+            width: 200px;
+        }
+    }
+    th {
+        
+    h6{ 
+        margin-top: 0;
+        margin-bottom: 0;
+        @include fontsh6;
+        text-align: left;
+
+    }
+}
+    td{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items:center;
+    p{
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: left;
+        @include fontp;
+    }
+    .vaccinated{
+        color:#32C096;
+    }
+    img{
+        margin:0 9px 0 9px ;
+        cursor: pointer;
+    }
+    bdo{
+        padding: 2.5px 0px 0px 9px;
+        @include bdo;
+    }
+}
+}
+tr {
+    height: 26px;/*пофіксити*/
+}
+
+/*social network*/
+
+.social_network {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items:center;
+    margin: 65px 0 133px 0;
+a {
+    text-decoration:none;
+    margin: 0 25px 0 0px;
+}
+button{
+    margin: 0 0 0 123px;
+    cursor: pointer;
+    /*align-self: flex-end;*/
+}
+.contact{
+    width: 172px;
+    height: 40px;
+    border-style:none;
+    border-radius:12px;
+    background-color:$color_light_green;
+    box-shadow: 0px 8px 28px rgba(24, 39, 75, 0.12), 0px 18px 88px rgba(24, 39, 75, 0.14);
+
+    color:#fff;
+    font-family: $font;
+    font-weight: $font-weight;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.75px;
+    align-items:center;
+}
+}
+
+/*sliders*/
+.sliders{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:center;
+    height: 650px;
+    .navigation{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:center;
+        margin: 0px 124px 0 26px ;
+        height: 65px;
+        input{
+            /*padding-bottom: 17px;*/
+        }
+        
+    }
+    .slide{
+        width: 349px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items:flex-start;
+        position: relative;
+        
+        .img1{
+            /*z-index:inherit;*/
+            position: absolute;
+            padding-bottom: 24px;
+            z-index: 1;
+            opacity: 0.8;
+            bottom: 155px;
+            margin-bottom: 24px;
+        }
+        .img3{
+            /*z-index: auto;*/
+            position: absolute;
+            z-index: 1;
+            opacity: 0.8;
+            top:224px;
+        }
+        .main_slide {
+            /*position: absolute;
+            z-index: 5;*/
+            z-index: 2;
+            top: -55px; /* Сдвигаем текст вверх */
+            left: 36px; 
+            /*margin: 20px;*/
+        }
+    }
+}
